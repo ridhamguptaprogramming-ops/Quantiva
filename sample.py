@@ -4,8 +4,8 @@ Sample from a trained model
 import os
 import pickle
 from contextlib import nullcontext
-import torch
-import tiktoken
+import torch # type: ignore
+import tiktoken # type: ignore
 from model import GPTConfig, GPT
 
 # -----------------------------------------------------------------------------

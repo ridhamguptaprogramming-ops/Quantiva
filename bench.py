@@ -3,9 +3,9 @@ A much shorter version of train.py for benchmarking
 """
 import os
 from contextlib import nullcontext
-import numpy as np
+import numpy as np # type: ignore
 import time
-import torch
+import torch # type: ignore
 from model import GPTConfig, GPT
 
 # -----------------------------------------------------------------------------
