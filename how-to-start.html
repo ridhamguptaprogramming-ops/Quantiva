@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>nanoGPT — How to Start</title>
+<title>Quantiva — How to Start</title>
 <style>
   :root {
     --bg: #0d1117;
@@ -266,7 +266,7 @@
 <body>
 
 <header class="hero">
-  <h1>⚡ nanoGPT — How to Start</h1>
+  <h1>⚡ Quantiva — How to Start</h1>
   <p class="sub">Train a baby GPT from scratch on your own machine, step by step.</p>
   <div class="badge-row">
     <span class="badge">macOS / Apple Silicon (M2)</span>
@@ -290,7 +290,7 @@
   <section>
     <h2><span class="num">2</span> Create a Virtual Environment</h2>
     <p class="dim">This keeps dependencies isolated to the project folder.</p>
-    <pre><button class="copy-btn" data-copy="cd /Users/ridhamgupta805gmail.com/Desktop/nanoGPT-master && /opt/homebrew/opt/python@3.12/bin/python3 -m venv .venv && source .venv/bin/activate">Copy</button><code><span class="cmd">cd</span> <span class="flag">~/Desktop/nanoGPT-master</span>
+    <pre><button class="copy-btn" data-copy="cd /Users/ridhamgupta805gmail.com/Desktop/Quantiva-master && /opt/homebrew/opt/python@3.12/bin/python3 -m venv .venv && source .venv/bin/activate">Copy</button><code><span class="cmd">cd</span> <span class="flag">~/Desktop/Quantiva-master</span>
 /opt/homebrew/opt/python@3.12/bin/python3 <span class="flag">-m venv</span> .venv
 <span class="cmd">source</span> .venv/bin/activate</code></pre>
     <div class="callout"><b>Note:</b> Your prompt should now show <code>(.venv)</code>.</div>
@@ -401,7 +401,7 @@
   <!-- ================= STEP 8 ================= -->
   <section>
     <h2><span class="num">8</span> Track Stats with Weights &amp; Biases</h2>
-    <p class="dim">nanoGPT ships with optional <code>wandb</code> logging. The <code>--wandb_log=True</code> flag logs <code>train/loss</code>, <code>val/loss</code>, <code>lr</code>, and <code>mfu</code> to an interactive dashboard:</p>
+    <p class="dim">Quantiva ships with optional <code>wandb</code> logging. The <code>--wandb_log=True</code> flag logs <code>train/loss</code>, <code>val/loss</code>, <code>lr</code>, and <code>mfu</code> to an interactive dashboard:</p>
     <pre><button class="copy-btn" data-copy="python train.py config/train_shakespeare_char.py --device=mps --compile=False --wandb_log=True --wandb_project=shakespeare-char --wandb_run_name=my-first-gpt">Copy</button><code><span class="cmd">python</span> train.py config/train_shakespeare_char.py <span class="flag">--device</span>=mps <span class="flag">--compile</span>=False \
   <span class="flag">--wandb_log</span>=True <span class="flag">--wandb_project</span>=shakespeare-char <span class="flag">--wandb_run_name</span>=my-first-gpt</code></pre>
   </section>
@@ -475,7 +475,7 @@ torchrun <span class="flag">--standalone --nproc_per_node=8</span> train.py conf
   </section>
 
   <footer>
-    nanoGPT &nbsp;·&nbsp; <span class="dim">the simplest, fastest repo for training medium-sized GPTs</span>
+    Quantiva &nbsp;·&nbsp; <span class="dim">the simplest, fastest repo for training medium-sized GPTs</span>
   </footer>
 </div>
 
