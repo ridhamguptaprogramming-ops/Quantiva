@@ -14,9 +14,9 @@ import logging
 import os
 from typing import Optional, Tuple
 
-import numpy as np
-import torch
-from torch.utils.data import Dataset
+import numpy as np # type: ignore
+import torch # type: ignore
+from torch.utils.data import Dataset # type: ignore
 
 logger = logging.getLogger(__name__)
 

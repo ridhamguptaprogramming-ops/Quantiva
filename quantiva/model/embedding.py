@@ -15,8 +15,8 @@ whether RoPE is in use.
 
 from __future__ import annotations
 
-import torch
-import torch.nn as nn
+import torch # type: ignore
+import torch.nn as nn # type: ignore
 
 from quantiva.model.config import ModelConfig
 

@@ -17,8 +17,8 @@ import os
 from contextlib import contextmanager
 from typing import Optional
 
-import torch
-import torch.nn as nn
+import torch # type: ignore
+import torch.nn as nn # type: ignore
 
 logger = logging.getLogger(__name__)
 
@@ -92,7 +92,7 @@ def wrap_fsdp(
         mixed_precision: Whether to enable bf16 mixed precision under FSDP.
     """
     try:
-        from torch.distributed.fsdp import (
+        from torch.distributed.fsdp import ( # type: ignore
             FullyShardedDataParallel as FSDP,
             MixedPrecision,
             ShardingStrategy,
@@ -134,7 +134,7 @@ def wrap_deepspeed(model: nn.Module, ds_config: Optional[dict] = None) -> nn.Mod
         For API simplicity, this returns the ``engine`` object directly.
     """
     try:
-        import deepspeed
+        import deepspeed # pyright: ignore[reportMissingImports]
     except ImportError:  # pragma: no cover
         logger.warning("deepspeed not installed; returning unwrapped model.")
         return model

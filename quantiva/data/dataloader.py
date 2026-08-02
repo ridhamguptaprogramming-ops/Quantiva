@@ -19,8 +19,8 @@ import os
 import random
 from typing import Optional, Tuple
 
-import numpy as np
-import torch
+import numpy as np # type: ignore
+import torch # type: ignore
 
 logger = logging.getLogger(__name__)
 

@@ -24,9 +24,9 @@ import time
 from dataclasses import dataclass, field
 from typing import Callable, Optional
 
-import torch
-import torch.nn as nn
-from torch.cuda.amp import GradScaler
+import torch # type: ignore
+import torch.nn as nn # type: ignore
+from torch.cuda.amp import GradScaler # type: ignore
 
 logger = logging.getLogger(__name__)
 
@@ -137,7 +137,7 @@ class Trainer:
     def _setup_logging(self) -> None:
         if self.config.wandb_log:
             try:
-                import wandb
+                import wandb # type: ignore
 
                 wandb.init(
                     project=self.config.wandb_project,

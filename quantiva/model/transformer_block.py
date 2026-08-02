@@ -12,8 +12,8 @@ from __future__ import annotations
 
 from typing import Optional
 
-import torch
-import torch.nn as nn
+import torch # type: ignore
+import torch.nn as nn # type: ignore
 
 from quantiva.model.attention import CausalSelfAttention
 from quantiva.model.config import ModelConfig

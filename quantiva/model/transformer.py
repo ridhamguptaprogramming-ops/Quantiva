@@ -10,8 +10,8 @@ from __future__ import annotations
 
 from typing import Optional
 
-import torch
-import torch.nn as nn
+import torch # type: ignore
+import torch.nn as nn # type: ignore
 
 from quantiva.model.config import ModelConfig
 from quantiva.model.embedding import Embedding
@@ -79,7 +79,7 @@ class Transformer(nn.Module):
                     layer_past=past_key_values[i],
                 )
             if use_cache:
-                presents.append(present)
+                presents.append(present) # type: ignore
 
         x = self.norm_f(x)
         return x, presents

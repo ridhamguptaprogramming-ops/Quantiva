@@ -18,8 +18,8 @@ import logging
 import os
 from typing import List, Optional
 
-import torch
-import torch.nn as nn
+import torch # type: ignore
+import torch.nn as nn # type: ignore
 
 from quantiva.data.dataloader import DataLoader
 from quantiva.datasets.preprocessing.formatting import (
@@ -125,7 +125,7 @@ def sft(args: argparse.Namespace) -> None:
     """Run supervised fine-tuning."""
     import random
 
-    import numpy as np
+    import numpy as np # type: ignore
 
     random.seed(args.seed)
     np.random.seed(args.seed)

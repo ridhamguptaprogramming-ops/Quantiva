@@ -18,9 +18,9 @@ from __future__ import annotations
 import math
 from typing import Optional
 
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+import torch # type: ignore
+import torch.nn as nn # type: ignore
+import torch.nn.functional as F # type: ignore
 
 from quantiva.model.config import ModelConfig
 from quantiva.model.rotary_embedding import RotaryEmbedding, apply_rotary_pos_emb

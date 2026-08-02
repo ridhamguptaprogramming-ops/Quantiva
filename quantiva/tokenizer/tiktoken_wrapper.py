@@ -17,7 +17,7 @@ from quantiva.tokenizer.base import Tokenizer
 logger = logging.getLogger(__name__)
 
 try:  # pragma: no cover - optional dependency
-    import tiktoken
+    import tiktoken # type: ignore
 except ImportError:  # pragma: no cover
     tiktoken = None
 

@@ -8,9 +8,9 @@ modules that satisfy the framework's normalization needs.
 
 from __future__ import annotations
 
-import torch
-import torch.nn as nn
-from torch.nn import functional as F
+import torch # type: ignore
+import torch.nn as nn # type: ignore
+from torch.nn import functional as F # type: ignore
 
 
 class LayerNorm(nn.Module):

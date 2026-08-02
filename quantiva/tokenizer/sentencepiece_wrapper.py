@@ -18,7 +18,7 @@ from quantiva.tokenizer.base import Tokenizer
 logger = logging.getLogger(__name__)
 
 try:  # pragma: no cover - import guard for optional dependency
-    import sentencepiece as spm
+    import sentencepiece as spm # type: ignore
 except ImportError:  # pragma: no cover
     spm = None
 

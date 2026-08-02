@@ -15,9 +15,9 @@ from __future__ import annotations
 import logging
 from typing import Optional
 
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+import torch # type: ignore
+import torch.nn as nn # type: ignore
+import torch.nn.functional as F # type: ignore
 
 logger = logging.getLogger(__name__)
 

@@ -17,8 +17,8 @@ import math
 from dataclasses import dataclass, field
 from typing import List, Optional
 
-import torch
-import torch.nn as nn
+import torch # type: ignore
+import torch.nn as nn # type: ignore
 
 logger = logging.getLogger(__name__)
 

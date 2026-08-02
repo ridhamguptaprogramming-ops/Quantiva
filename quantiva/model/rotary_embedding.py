@@ -11,8 +11,8 @@ Reference: https://arxiv.org/abs/2104.09864
 
 from __future__ import annotations
 
-import torch
-import torch.nn as nn
+import torch # type: ignore
+import torch.nn as nn # type: ignore
 
 
 def precompute_rope_frequencies(

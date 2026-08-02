@@ -18,8 +18,8 @@ import os
 from dataclasses import asdict
 from typing import Optional
 
-import torch
-import torch.nn as nn
+import torch # type: ignore
+import torch.nn as nn # pyright: ignore[reportMissingImports]
 
 from quantiva.model.config import ModelConfig
 from quantiva.model.transformer import Transformer

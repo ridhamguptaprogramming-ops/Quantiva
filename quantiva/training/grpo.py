@@ -17,9 +17,9 @@ import logging
 import os
 from typing import Callable, List, Optional
 
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+import torch # type: ignore
+import torch.nn as nn # type: ignore
+import torch.nn.functional as F # type: ignore
 
 logger = logging.getLogger(__name__)
 
@@ -139,7 +139,7 @@ class GRPOTrainer:
         sampling. In a production system this would call the framework's
         ``inference.generate`` with a sampler; here we keep it self-contained.
         """
-        from quantiva.inference.generate import generate
+        from quantiva.inference.generate import generate # type: ignore
 
         completions = []
         for _ in range(group_size):

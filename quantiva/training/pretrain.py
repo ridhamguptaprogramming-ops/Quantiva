@@ -20,8 +20,8 @@ import json
 import logging
 import os
 
-import torch
-import torch.nn as nn
+import torch # type: ignore
+import torch.nn as nn # type: ignore
 
 from quantiva.data.dataloader import DataLoader
 from quantiva.model.config import ModelConfig
@@ -90,7 +90,7 @@ def pretrain(args: argparse.Namespace) -> None:
     """Run pretraining."""
     import random
 
-    import numpy as np
+    import numpy as np # type: ignore
 
     random.seed(args.seed)
     np.random.seed(args.seed)
