@@ -1,86 +1,17 @@
-# Quantiva LLM Framework — Build Plan
+# Quantiva Premium AI Chat — Redesign TODO
 
-## Phase 1 — Tokenizer (`quantiva/tokenizer/`)
-- [x] base.py (abstract Tokenizer interface)
-- [x] bpe.py (BPE trainer from scratch)
-- [x] sentencepiece_wrapper.py (SentencePiece support)
-- [x] tiktoken_wrapper.py (tiktoken compatibility)
-- [x] factory.py (tokenizer factory)
-- [x] evaluate.py (tokenizer evaluation)
-- [x] __init__.py
+## Plan Steps
 
-## Phase 2 — Model (`quantiva/model/`)
-- [x] config.py (model configuration dataclass)
-- [x] embedding.py (token + rotary position embeddings)
-- [x] normalization.py (LayerNorm + RMSNorm)
-- [x] rotary_embedding.py (RoPE)
-- [x] attention.py (MHA + GQA + Flash Attention + KV Cache + causal mask)
-- [x] mlp.py (GELU + SwiGLU)
-- [x] transformer_block.py (pre/post norm blocks, residual)
-- [x] transformer.py (full transformer stack)
-- [x] gpt.py (GPT LM head, weight init, param count, MFU)
-- [x] __init__.py
-
-## Phase 3 — Data (`quantiva/data/`, `quantiva/datasets/`)
-- [x] dataset.py (token streaming, memmap dataset)
-- [x] dataloader.py (batch sampler, multi-GPU)
-- [x] preprocessing/chunking.py (document chunking)
-- [x] preprocessing/formatting.py (chat templates, SFT formatting)
-- [x] __init__.py files
-
-## Phase 4 — Training (`quantiva/training/`)
-- [ ] trainer.py (grad accum, AMP, checkpoint, resume, LR scheduler, clipping, W&B)
-- [ ] pretrain.py (pretraining entry)
-- [ ] sft.py (supervised fine-tuning)
-- [ ] dpo.py (direct preference optimization)
-- [ ] grpo.py (group relative policy optimization)
-- [ ] lora.py (LoRA/QLoRA)
-- [ ] rl.py (RLHF-style reinforcement learning)
-- [ ] distributed.py (DDP/FSDP/DeepSpeed helpers)
-- [ ] __init__.py
-
-## Phase 5 — Inference (`quantiva/inference/`)
-- [ ] sampler.py (temperature/top-k/top-p/min-p/beam)
-- [ ] kv_cache.py (KV cache)
-- [ ] generate.py (autoregressive generation, speculative decoding, batch)
-- [ ] streamer.py (token streaming)
-- [ ] quantize.py (quantized inference hooks)
-- [ ] __init__.py
-
-## Phase 6 — RAG / Tools / Eval (`quantiva/rag/`, `quantiva/tools/`, `quantiva/evaluation/`)
-- [ ] rag/loaders.py (PDF, Markdown)
-- [ ] rag/chunking.py
-- [ ] rag/embeddings.py
-- [ ] rag/retriever.py (FAISS, ChromaDB)
-- [ ] rag/rag.py (retrieval pipeline)
-- [ ] tools/base.py (tool abstraction)
-- [ ] tools/python_executor.py
-- [ ] tools/calculator.py
-- [ ] tools/web_search.py (hook)
-- [ ] tools/image_gen.py (hook)
-- [ ] tools/function_calling.py (JSON schema)
-- [ ] evaluation/benchmarks.py (perplexity)
-- [ ] evaluation/gsm8k.py
-- [ ] evaluation/humaneval.py
-- [ ] evaluation/mmlu.py
-
-## Phase 7 — API (`quantiva/api/`)
-- [ ] server.py (FastAPI app)
-- [ ] openai_compat.py (OpenAI-compatible endpoints)
-- [ ] websockets.py (streaming)
-- [ ] schemas.py (pydantic models)
-- [ ] __init__.py
-
-## Phase 8 — Frontend (`frontend/`)
-- [ ] Next.js + React + Tailwind + TypeScript chat UI
-- [ ] Dark mode, streaming, markdown, syntax highlight, code copy
-- [ ] Image upload, drag & drop, voice input, responsive
-
-## Phase 9 — Docker / Configs / Scripts / Tests / Docs
-- [ ] Dockerfile (api/train/frontend)
-- [ ] docker-compose.yml (Redis, Postgres, Nginx)
-- [ ] configs/*.yaml
-- [ ] scripts/ (entrypoints, data prep)
-- [ ] tests/ (unit tests)
-- [ ] docs/ (README, architecture, training, inference, deployment, fine-tuning, API, developer guide)
-
+- [x] 1. Analyze current `index.html` and project structure (branding asset: `assets/quantiva.jpg`)
+- [x] 2. Get user approval on the redesign plan
+- [x] 3. Build design system (CSS variables, dark/light theme, typography, spacing, shadows)
+- [x] 4. Implement premium background (gradient, grid, noise, floating orbs, particles)
+- [x] 5. Build 280px sidebar (glowing logo, new chat, search + Ctrl+K, recent chats, profile card with storage)
+- [x] 6. Build floating top navbar (conversation title, model selector, notifications, theme toggle, profile)
+- [x] 7. Build empty-state hero (AI orb, greeting, gradient headline, quick actions, trending prompts, recent files, tips, shortcuts, drag & drop zone)
+- [x] 8. Build premium composer (glass, glow border, auto-grow textarea, icon toolbar, gradient send button, typing animation)
+- [x] 9. Build message list (AI orb + user avatar, streaming reply, typing indicator, copy/regenerate actions)
+- [x] 10. Add CSS animations (sidebar, cards, hero, input, logo, messages, typing dots)
+- [x] 11. Add accessibility (ARIA, focus rings, keyboard nav, reduced motion) and responsive layout
+- [x] 12. Rewrite as pure vanilla JS (zero external dependencies, works via `file://` protocol)
+- [x] 13. Final verification: 768 lines, complete, opened in browser
