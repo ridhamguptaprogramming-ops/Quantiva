@@ -1,7 +1,7 @@
 """
 Quantiva — A production-grade, from-scratch LLM framework.
 
-Inspired by nanoGPT/nanochat, rebuilt with clean architecture, scalability,
+Inspired by Quantiva/nanochat, rebuilt with clean architecture, scalability,
 and modern engineering practices. Capable of training and serving real
 GPT-style language models.
 """

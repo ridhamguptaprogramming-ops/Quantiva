@@ -1,7 +1,7 @@
 """
 Dataloader.
 
-Implements the classic nanoGPT-style streaming batch sampler:
+Implements the classic Quantiva-style streaming batch sampler:
   - Memory-maps a flat token array.
   - Maintains a cursor per process so consecutive batches are contiguous
     (the model sees an uninterrupted token stream across batch boundaries).

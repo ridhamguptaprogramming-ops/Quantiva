@@ -3,7 +3,7 @@ Datasets.
 
 Provides:
   - ``MemmapDataset``: memory-mapped access to a flat ``uint16`` token array
-    (the nanoGPT/openwebtext format).
+    (the Quantiva/openwebtext format).
   - ``TokenDataset``: a PyTorch ``Dataset`` that yields (input, target)
     context blocks from a token stream.
 """

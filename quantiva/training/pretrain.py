@@ -2,7 +2,7 @@
 Pretraining entry point.
 
 Trains a GPT-style model from scratch on a tokenized corpus (``train.bin`` /
-``val.bin``). Supports the classic nanoGPT workflow plus the new framework's
+``val.bin``). Supports the classic Quantiva workflow plus the new framework's
 config-driven design.
 
 Example:

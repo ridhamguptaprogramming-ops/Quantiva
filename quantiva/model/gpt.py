@@ -179,7 +179,7 @@ class GPT(nn.Module):
     ) -> torch.optim.Optimizer:
         """
         Build an AdamW optimizer with weight decay applied only to 2D
-        parameters (matrices), following the GPT-2 / nanoGPT recipe.
+        parameters (matrices), following the GPT-2 / Quantiva recipe.
         """
         # Collect parameters that require grad.
         param_dict = {pn: p for pn, p in self.named_parameters() if p.requires_grad}
