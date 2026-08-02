@@ -1,17 +1,19 @@
-# Quantiva Premium AI Chat — Redesign TODO
+# Quantiva — Distributed Module Enhancement TODO
 
 ## Plan Steps
 
-- [x] 1. Analyze current `index.html` and project structure (branding asset: `assets/quantiva.jpg`)
-- [x] 2. Get user approval on the redesign plan
-- [x] 3. Build design system (CSS variables, dark/light theme, typography, spacing, shadows)
-- [x] 4. Implement premium background (gradient, grid, noise, floating orbs, particles)
-- [x] 5. Build 280px sidebar (glowing logo, new chat, search + Ctrl+K, recent chats, profile card with storage)
-- [x] 6. Build floating top navbar (conversation title, model selector, notifications, theme toggle, profile)
-- [x] 7. Build empty-state hero (AI orb, greeting, gradient headline, quick actions, trending prompts, recent files, tips, shortcuts, drag & drop zone)
-- [x] 8. Build premium composer (glass, glow border, auto-grow textarea, icon toolbar, gradient send button, typing animation)
-- [x] 9. Build message list (AI orb + user avatar, streaming reply, typing indicator, copy/regenerate actions)
-- [x] 10. Add CSS animations (sidebar, cards, hero, input, logo, messages, typing dots)
-- [x] 11. Add accessibility (ARIA, focus rings, keyboard nav, reduced motion) and responsive layout
-- [x] 12. Rewrite as pure vanilla JS (zero external dependencies, works via `file://` protocol)
-- [x] 13. Final verification: 768 lines, complete, opened in browser
+- [ ] 1. Improve `init_process_group` (backend auto-detect, timeout, explicit rank/world_size, gloo fallback)
+- [ ] 2. Add environment helpers: `is_distributed`, `get_local_rank`, `get_local_world_size`
+- [ ] 3. Add device helpers: `get_device`, `get_rank_device`, `_get_backend_device`
+- [ ] 4. Add rank-0 helpers: `master_print`, `barrier`
+- [ ] 5. Add collective ops: `all_reduce_tensor`, `all_reduce_mean`, `all_reduce_sum`, `all_gather`
+- [ ] 6. Add object collectives: `gather_object`, `broadcast_object`, `reduce_dict`
+- [ ] 7. Add model/checkpoint helpers: `sync_params`, `save_checkpoint_distributed`, `load_checkpoint_distributed`
+- [ ] 8. Add utility helpers: `set_seed`, `get_world_info`, `enable_tf32`
+- [ ] 9. Improve `wrap_ddp` (find_unused_parameters, gradient_as_bucket_view, static_graph)
+- [ ] 10. Improve `wrap_fsdp` (device_id, cpu_offload, sync_module_states, use_orig_params)
+- [ ] 11. Improve `wrap_deepspeed` (micro-batch config, docstrings)
+- [ ] 12. Harden `broadcast_state_dict` (lists/tuples, non-tensor values)
+- [ ] 13. Export distributed helpers from `quantiva/training/__init__.py`
+- [ ] 14. Verify: import + single-process smoke test
+
