@@ -10,23 +10,23 @@
 - [x] __init__.py
 
 ## Phase 2 — Model (`quantiva/model/`)
-- [ ] config.py (model configuration dataclass)
-- [ ] embedding.py (token + rotary position embeddings)
-- [ ] normalization.py (LayerNorm + RMSNorm)
-- [ ] rotary_embedding.py (RoPE)
-- [ ] attention.py (MHA + GQA + Flash Attention + KV Cache + causal mask)
-- [ ] mlp.py (GELU + SwiGLU)
-- [ ] transformer_block.py (pre/post norm blocks, residual)
-- [ ] transformer.py (full transformer stack)
-- [ ] gpt.py (GPT LM head, weight init, param count, MFU)
-- [ ] __init__.py
+- [x] config.py (model configuration dataclass)
+- [x] embedding.py (token + rotary position embeddings)
+- [x] normalization.py (LayerNorm + RMSNorm)
+- [x] rotary_embedding.py (RoPE)
+- [x] attention.py (MHA + GQA + Flash Attention + KV Cache + causal mask)
+- [x] mlp.py (GELU + SwiGLU)
+- [x] transformer_block.py (pre/post norm blocks, residual)
+- [x] transformer.py (full transformer stack)
+- [x] gpt.py (GPT LM head, weight init, param count, MFU)
+- [x] __init__.py
 
 ## Phase 3 — Data (`quantiva/data/`, `quantiva/datasets/`)
-- [ ] dataset.py (token streaming, memmap dataset)
-- [ ] dataloader.py (batch sampler, multi-GPU)
-- [ ] preprocessing/chunking.py (document chunking)
-- [ ] preprocessing/formatting.py (chat templates, SFT formatting)
-- [ ] __init__.py files
+- [x] dataset.py (token streaming, memmap dataset)
+- [x] dataloader.py (batch sampler, multi-GPU)
+- [x] preprocessing/chunking.py (document chunking)
+- [x] preprocessing/formatting.py (chat templates, SFT formatting)
+- [x] __init__.py files
 
 ## Phase 4 — Training (`quantiva/training/`)
 - [ ] trainer.py (grad accum, AMP, checkpoint, resume, LR scheduler, clipping, W&B)
