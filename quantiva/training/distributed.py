@@ -11,11 +11,15 @@ process group consistently across launches (torchrun, deepspeed, etc.),
 plus a battery of convenience helpers:
 
   - Process-group introspection: rank, world size, local rank, backend.
-  - Rank-0 helpers: ``master_print``, ``barrier``.
-  - Collectives: all-reduce (mean/sum/tensor), all-gather, gather/broadcast
-    of arbitrary Python objects, and metric-dict reduction.
-  - Checkpoint helpers that save only on rank 0 and resume via broadcast.
-  - Seeding, device resolution, TF32, and parameter sync for startup.
+- Rank-0 helpers: ``master_print``, ``master_log``, ``barrier``.
+  - Collectives: all-reduce (mean/sum/max/min/tensor), all-gather (list and
+    single-tensor forms), gather/broadcast of arbitrary Python objects, and
+    metric-dict reduction.
+  - Tensor-parallel style sharding helpers: ``split_tensor`` / ``gather_tensor``.
+  - Checkpoint helpers that save only on rank 0 and resume via broadcast, plus
+    lightweight shared-filesystem (non-broadcast) variants.
+  - Seeding, device resolution, TF32, parameter-count reports, and parameter /
+    buffer sync for startup.
 
 All functions are no-ops / single-process friendly when the process group is
 not initialized, so they are safe to call in plain single-GPU / CPU runs.
@@ -56,20 +60,41 @@ __all__ = [
     "wrap_ddp",
     "wrap_fsdp",
     "wrap_deepspeed",
-    # Collectives
+# Tensor collectives
     "all_reduce_tensor",
     "all_reduce_mean",
     "all_reduce_sum",
+    "all_reduce_max",
+    "all_reduce_min",
+    "all_reduce_mean_tensor",
+    "all_reduce_sum_tensor",
     "all_gather",
+    "all_gather_into_tensor",
+    # Tensor-parallel helpers
+    "split_tensor",
+    "gather_tensor",
+    # Object collectives
     "gather_object",
     "broadcast_object",
     "reduce_dict",
     "broadcast_state_dict",
     # Model / checkpoint helpers
     "sync_params",
+    "broadcast_buffers",
+    "replace_parameter",
     "save_checkpoint_distributed",
     "load_checkpoint_distributed",
-    # Misc
+    "save_shared_checkpoint",
+    "load_shared_checkpoint",
+    # Model wrappers
+    "wrap_ddp_auto",
+    # Parameter accounting
+    "get_parameter_total",
+    "get_parameter_breakdown",
+    # Logging / misc
+    "master_log",
+    "log_world_info",
+    "get_device_count",
     "set_seed",
 ]
 
